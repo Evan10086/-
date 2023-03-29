@@ -85,7 +85,7 @@ int main(int argc, char const *argv[])
     struct sockaddr_in ServerAddr ={
         .sin_family = AF_INET,
         .sin_port = htons(atoi(argv[1])),
-        .sin_addr = inet_addr( "120.78.234.61") 
+        .sin_addr = inet_addr( "192.168.1.1") 
     };
     socklen_t addrlen = sizeof(ServerAddr);
 
