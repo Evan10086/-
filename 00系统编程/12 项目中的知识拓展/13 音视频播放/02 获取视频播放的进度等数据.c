@@ -29,8 +29,9 @@ void * getMplayerMsg (void * arg)
 }
 
 
-int main(int argc, char const *argv[])
-{
+
+
+void xxxxxxx (){
     if( access("/tmp/myFifo", F_OK ))
     {
         if(mkfifo("/tmp/myFifo", 0666 ))
@@ -48,7 +49,7 @@ int main(int argc, char const *argv[])
     }
     
     
-    FILE * fp =  popen("mplayer -quiet -slave -input file=/tmp/myFifo -geometry 100:100 -zoom -x 600 -y 300  /Even/video/Faded3.avi &" , "r");
+    FILE * fp =  popen("mplayer -quiet -slave -input file=/tmp/myFifo -geometry 100:100 -zoom -x 600 -y 300  /evan_work/03.avi &" , "r");
     // system("mplayer -quiet -slave -input file=/tmp/myFifo /Even/video/Faded3.avi &" );// 直接执行该命令 & 指该命令在后台执行
 
     pthread_t tid ;
@@ -63,6 +64,4 @@ int main(int argc, char const *argv[])
         write(fd_fifo , cmd  , strlen(cmd ) );
         printf("申请获得时间。。。。。\n");
     }
-    
-    return 0;
 }
