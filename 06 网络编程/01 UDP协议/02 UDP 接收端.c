@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
     // 绑定地址 （把当前进程的端口号与 IP地址进行绑定）
     struct sockaddr_in myAddr = {
         .sin_family = AF_INET ,
-        .sin_addr = inet_addr("192.168.1.1"),
+        .sin_addr = inet_addr("120.78.234.61"),
         .sin_port = htons(65000) 
     };
     socklen_t addrlen = sizeof(myAddr) ;
